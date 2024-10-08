@@ -60,7 +60,10 @@
             padding: 10px 0;
             position: fixed;
             width: 100%;
-            bottom: 0;
+            bottom: -10px; /* Partially hidden */
+            transition: bottom 0.3s; /* Smooth transition */
+            z-index: 1000; /* Ensure it's above other elements */
+        
         }
         .form-group {
             margin-bottom: 15px;
