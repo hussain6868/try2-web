@@ -1,147 +1,95 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    background-color: #f7f9fc; /* Light background for comfort */
-    color: #444; /* Softer text color */
-    line-height: 1.6; /* Increased line height for readability */
-}
-
-header {
-    background:white; /* Softer blue color */
-    padding: 20px;
-    text-align: center;
-    color: black; /* Font color */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-bottom: 80px; /* Make space for footer */
 }
 
 .container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #333;
+    margin: 0; /* Remove default margin */
+    font-size: 1.5em; /* Smaller font size */
     width: 90%;
     max-width: 1200px;
     margin: auto;
 }
-
+p {
+    color: #666;
+}
 .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
+    max-width: 100px; /* Smaller logo size */
+    margin-bottom: -3px; /* Closer to title */
 }
-
-.logo img {
-    width: 50px;
-    margin-left: 10px;
-}
-
-.theme-toggle {
-    cursor: pointer;
-}
-
-main {
-    padding: 40px 20px;
-}
-
-.Contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.form-wrapper {
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    max-width: 500px; /* Set a max width for the form */
-    width: 100%; /* Allow full width on smaller screens */
-    text-align: center; /* Center text within the form */
-    transition: transform 0.3s; /* Animation for hover effect */
-}
-
-.form-wrapper:hover {
-    transform: scale(1.02); /* Slight zoom effect on hover */
-}
-
-.contact-heading {
-    margin-bottom: 20px;
-}
-
-.contact-heading img {
-    width: 80px;
-    margin-bottom: 10px;
-}
-
-.contact-heading h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: black; /* Changed to black */
-}
-
-.text {
-    margin-bottom: 20px;
-    color: #666; /* Softer gray for text */
-}
-
-.input-wrap {
+.logo2 {
+    max-width: 250px;
+    margin-bottom: 15px;
     position: relative;
-    margin-bottom: 20px;
 }
-
-.contact-input {
+.links a {
+    display: block;
+    color: #007BFF;
+    text-decoration: none;
+    margin: 5px 0;
+}
+.footer {
+    color: #666; /* Text color */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0px; /* Partially hidden */
+    transition: bottom 0.3s; /* Smooth transition */
+    z-index: 1000; /*Ensure it's above other elements */
+    background-color: transparent; /* Remove background color */        }
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+.form-group input, .form-group select {
     width: 100%;
     padding: 12px;
+    box-sizing: border-box;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border-color 0.3s, box-shadow 0.3s; /* Added box-shadow for focus */
+    border-radius: 4px;
+    font-size: 1em;
 }
 
-.contact-input:focus {
-    border-color: #4a90e2; /* Softer focus color */
-    outline: none;
-    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Glow effect */
-}
-
-.contact-button {
-    text-align: center;
-}
-
-.btn {
-    background: #4a90e2; /* Softer blue tone */
-    color: white;
+button {
+    width: 100%; /* Full width */
+    padding: 12px; /* Increased padding for button */
+    background-color: #007BFF; /* Button color */
+    color: white; /* Button text color */
     border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s, transform 0.2s; /* Transition for hover */
+    border-radius: 4px;
+    font-size: 1em; /* Increased font size */
+    cursor: pointer; /* Pointer cursor on hover */
 }
-
-.btn:hover {
-    background: #357ABD; /* Darker shade on hover */
-    transform: translateY(-1px); /* Slight lift on hover */
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
-
 .whatsapp-chat {
     position: fixed;
-    bottom: 20px; /* Distance from the bottom */
-    right: 20px; /* Distance from the right */
-    z-index: 1000; /* Ensure it stays on top */
+    bottom: 20px; /* Adjusted position above footer */
+    left: 20px; /* Adjusted position from the right */
+    z-index: 1000; /* Ensure it's above other elements */
 }
-
 .whatsapp-chat img {
     width: 60px; /* Size of the icon */
     height: 60px; /* Size of the icon */
     transition: transform 0.3s; /* Transition for hover effect */
 }
-
-.whatsapp-chat:hover img {
-    transform: scale(1.1); /* Slight zoom on hover */
-}
-
-@media (max-width: 768px) {
-    .Contact {
-        flex-direction: column;
-    }
+.whatsapp-chat img:hover {
+    transform: scale(1.1); /* Scale effect on hover */
 }
